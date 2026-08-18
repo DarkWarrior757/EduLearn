@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chapter 3 Quiz - EduLearn</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">EduLearn</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="science.html">Science</a>
+        <a href="chapter3.html">Chapter 3</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="quiz-page">
+
+        <h1>📝 Chapter 3 Quiz</h1>
+
+        <p class="quiz-subtitle">
+            Heat
+        </p>
+
+        <div id="timer">
+            ⏱️ Time Left: <span id="time">10:00</span>
+        </div>
+
+        <div id="quiz-container"></div>
+
+        <div class="quiz-navigation">
+
+            <button id="previous-button" class="quiz-button">
+                ← Previous
+            </button>
+
+            <button id="next-button" class="quiz-button">
+                Next →
+            </button>
+
+            <button id="submit-test" class="quiz-button">
+                Submit Test 🎯
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section id="loading-screen" class="loading-screen">
+
+        <div class="loader"></div>
+
+        <h2>Checking your answers...</h2>
+
+        <p>Please wait...</p>
+
+    </section>
+
+
+    <section id="result-screen" class="result-screen">
+
+        <h1>🎉 Quiz Complete!</h1>
+
+        <div id="score"></div>
+
+        <div id="answers"></div>
+
+        <button class="quiz-button" onclick="location.reload()">
+            🔄 Try Again
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>© 2026 EduLearn</p>
+</footer>
+
+<script src="quiz3.js"></script>
+
+</body>
+</html>

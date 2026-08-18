@@ -1,0 +1,749 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+header {
+    height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    background: linear-gradient(120deg, #eaf2ff, #ffffff);
+}
+
+.hero h1 {
+    font-size: 55px;
+    max-width: 700px;
+}
+
+.hero h1 span {
+    color: #2563eb;
+}
+
+.hero p {
+    font-size: 19px;
+    margin: 25px 0;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.courses {
+    padding: 70px 8%;
+}
+
+.courses h2 {
+    font-size: 34px;
+    margin-bottom: 35px;
+}
+
+.course-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.course-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.course-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #111827;
+    color: white;
+}
+/* =========================
+   QUIZ PAGE
+========================= */
+
+.quiz-page {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-page h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.quiz-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.question-number {
+    color: #16a34a;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.quiz-page h2 {
+    margin-bottom: 25px;
+}
+
+
+/* ANSWER OPTIONS */
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.option:hover {
+    border-color: #22c55e;
+    background: #f0fdf4;
+}
+
+.option input {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* GREEN BUTTON */
+
+.quiz-button {
+    display: block;
+    margin: 30px auto 0;
+    padding: 14px 28px;
+    background: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quiz-button:hover {
+    background: #16a34a;
+    transform: translateY(-2px);
+}
+
+
+/* LOADING SCREEN */
+
+.loading-screen {
+    display: none;
+    min-height: 500px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.loader {
+    width: 55px;
+    height: 55px;
+    border: 6px solid #e5e7eb;
+    border-top: 6px solid #22c55e;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* RESULT SCREEN */
+
+.result-screen {
+    display: none;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 35px;
+}
+
+.result-screen > h1 {
+    text-align: center;
+}
+
+
+/* SCORE */
+
+#score {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.score-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #22c55e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+/* ANSWER CARDS */
+
+.answer-card {
+    background: white;
+    padding: 22px;
+    margin: 20px 0;
+    border-radius: 15px;
+    border-left: 6px solid;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.answer-card.correct {
+    border-left-color: #22c55e;
+}
+
+.answer-card.wrong {
+    border-left-color: #ef4444;
+}
+
+.answer-card p {
+    line-height: 1.6;
+}
+#timer {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px auto 30px;
+    padding: 12px;
+    background: #f0fdf4;
+    border-radius: 10px;
+    max-width: 250px;
+}
+
+#time {
+    color: #16a34a;
+    font-size: 24px;
+}
+.quiz-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.quiz-navigation .quiz-button {
+    margin: 0;
+}
+
+#previous-button {
+    background: #64748b;
+}
+
+#previous-button:hover {
+    background: #475569;
+}
+
+#submit-test {
+    display: none;
+}
+/* =================================
+   MODERN LOGIN PAGE
+================================= */
+
+.login-body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(0, 255, 150, 0.15), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(0, 200, 255, 0.12), transparent 30%),
+        #07110d;
+
+    overflow: hidden;
+}
+
+
+/* Animated background glow */
+
+.login-body::before {
+    content: "";
+
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    background: rgba(0, 255, 140, 0.08);
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    top: -200px;
+    left: -200px;
+
+    animation: floatingGlow 8s infinite alternate;
+}
+
+
+.login-body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    background: rgba(0, 200, 255, 0.07);
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    bottom: -200px;
+    right: -150px;
+
+    animation: floatingGlow 10s infinite alternate-reverse;
+}
+
+
+@keyframes floatingGlow {
+
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(80px, 50px);
+    }
+
+}
+
+
+/* Login container */
+
+.login-container {
+
+    width: 100%;
+    max-width: 430px;
+
+    padding: 25px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Login card */
+
+.login-card {
+
+    padding: 42px;
+
+    border-radius: 24px;
+
+    background: rgba(15, 25, 21, 0.82);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(0, 255, 140, 0.06);
+
+}
+
+
+/* Logo */
+
+.login-logo {
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    color: white;
+
+    margin-bottom: 25px;
+}
+
+
+.login-logo span {
+
+    color: #35e88a;
+
+}
+
+
+/* Welcome */
+
+.login-welcome {
+
+    color: white;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    margin: 0 0 8px;
+}
+
+
+.login-subtitle {
+
+    color: #8d9a94;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Inputs */
+
+.input-group {
+
+    margin-bottom: 20px;
+}
+
+
+.input-group label {
+
+    display: block;
+
+    color: #d7dedb;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    border-radius: 12px;
+
+    border: 1px solid #29352f;
+
+    background: #101a16;
+
+    color: white;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+
+.input-group input::placeholder {
+
+    color: #66736c;
+
+}
+
+
+.input-group input:focus {
+
+    border-color: #35e88a;
+
+    box-shadow:
+        0 0 0 3px rgba(53, 232, 138, 0.10);
+
+    background: #121e19;
+}
+
+
+/* Password */
+
+.password-box {
+
+    position: relative;
+}
+
+
+.password-box input {
+
+    padding-right: 50px;
+}
+
+
+.password-box button {
+
+    position: absolute;
+
+    right: 8px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    opacity: 0.7;
+
+    padding: 5px;
+}
+
+
+.password-box button:hover {
+
+    opacity: 1;
+}
+
+
+/* Main button */
+
+.login-main-button {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: #35e88a;
+
+    color: #06120b;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    margin-top: 5px;
+
+    box-shadow:
+        0 8px 25px rgba(53, 232, 138, 0.15);
+}
+
+
+.login-main-button:hover {
+
+    transform: translateY(-2px);
+
+    background: #55f19c;
+
+    box-shadow:
+        0 12px 30px rgba(53, 232, 138, 0.25);
+}
+
+
+.login-main-button:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* Switch login/signup */
+
+.switch-text {
+
+    text-align: center;
+
+    color: #7f8b85;
+
+    font-size: 13px;
+
+    margin-top: 25px;
+}
+
+
+.switch-text span {
+
+    color: #35e88a;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.switch-text span:hover {
+
+    text-decoration: underline;
+}
+
+
+/* Messages */
+
+#login-message {
+
+    text-align: center;
+
+    font-size: 13px;
+
+    min-height: 18px;
+
+    margin-top: 20px;
+}
+
+
+#login-message.success {
+
+    color: #35e88a;
+}
+
+
+#login-message.error {
+
+    color: #ff7373;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .login-container {
+
+        padding: 15px;
+    }
+
+
+    .login-card {
+
+        padding: 30px 24px;
+
+        border-radius: 20px;
+    }
+
+
+    .login-logo {
+
+        font-size: 30px;
+    }
+
+
+    .login-welcome {
+
+        font-size: 24px;
+    }
+
+}
+#auth-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.welcome-user {
+    color: white;
+    font-weight: 600;
+}

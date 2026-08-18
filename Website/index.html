@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduLearn - Learn Better</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">EduLearn</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="tests.html">Tests</a>
+            <a href="notes.html">Notes</a>
+        </nav>
+
+<div id="auth-area"></div>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+            <div>
+                <h1>Learn. Practice. <span>Achieve.</span></h1>
+
+                <p>
+                    Learn from quality courses, practice with tests,
+                    and track your progress.
+                </p>
+
+                <button onclick="exploreCourses()">
+                    Explore Courses
+                </button>
+            </div>
+        </section>
+
+
+        <section id="courses" class="courses">
+
+            <h2>Popular Courses</h2>
+
+            <div class="course-container">
+
+                <div class="course-card">
+                    <h3>Class 7 Science</h3>
+                    <p>Physics, Chemistry & Biology</p>
+                    <button onclick="window.location.href='science.html'">
+    View Course
+</button>
+                </div>
+
+                <div class="course-card">
+                    <h3>Class 7 Mathematics</h3>
+                    <p>Learn concepts and practice questions</p>
+                    <button>View Course</button>
+                </div>
+
+                <div class="course-card">
+                    <h3>Computer Science</h3>
+                    <p>Learn programming from the basics</p>
+                    <button>View Course</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 EduLearn. All rights reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
